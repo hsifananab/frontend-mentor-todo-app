@@ -1,0 +1,17 @@
+.filter {
+  flex-grow: 1;
+
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+
+  &__button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    font-family: var(--family);
+    color: var(--color-text-light);
+    font-weight: var(--fw-bold);
+  }
+}

@@ -1,0 +1,22 @@
+.todosMenu {
+  padding: 16px 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 14px;
+  color: var(--color-text-light);
+
+  & div {
+    flex-grow: 1;
+
+    &:first-child {
+      text-align: left;
+    }
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.header {
+  height: 48px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    font-weight: var(--fw-bold);
+    font-size: 40px;
+    letter-spacing: 15px;
+
+    align-self: flex-start;
+
+    color: hsl(0, 0%, 100%);
+  }
+}

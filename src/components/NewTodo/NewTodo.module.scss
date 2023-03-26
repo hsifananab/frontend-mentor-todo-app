@@ -1,0 +1,15 @@
+.form {
+  box-shadow: var(--shadow);
+  &__input {
+    font-size: var(--fs);
+    background-color: var(--color-bg-lighter);
+    color: var(--color-text-primary);
+    outline: none;
+    width: 100%;
+    padding: 20px 24px;
+    border-radius: var(--radii);
+    border: none;
+
+    font-family: var(--family);
+  }
+}
