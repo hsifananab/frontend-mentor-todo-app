@@ -1,8 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectActiveTodos } from '../../../../../../redux/todo-app/src/store/todos/todos-selectors';
 import { selectActiveFilter } from '../../store/filters/filtersSelectors';
-import { toggleTodo } from '../../store/todos/todosActions';
 import { selectVisibleTodos } from '../../store/todos/todosSelectors';
 import DeleteBtn from '../DeleteBtn/DeleteBtn';
 import TodoItem from '../TodoItem/TodoItem';
@@ -25,6 +23,7 @@ const TodoList = () => {
         ))}
       </ul>
       <TodosMenu />
+      <div className={styles.test}></div>
     </div>
   );
 };

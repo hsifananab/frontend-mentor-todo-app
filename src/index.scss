@@ -11,8 +11,6 @@
   --radii: 5px;
   --bg-checked: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
   --color-blue: hsl(220, 98%, 61%);
-
-  /* color-scheme: light dark; */
 }
 
 body[data-theme='dark'] {
@@ -62,18 +60,3 @@ body {
 
   transition: all linear 0.1s;
 }
-
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-
-  a:hover {
-    color: #747bff;
-  }
-
-  button {
-    background-color: #f9f9f9;
-  }
-} */
