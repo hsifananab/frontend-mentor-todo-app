@@ -1,15 +1,18 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectActiveTodos } from '../../../../../../redux/todo-app/src/store/todos/todos-selectors';
+import { selectActiveFilter } from '../../store/filters/filtersSelectors';
+import { toggleTodo } from '../../store/todos/todosActions';
+import { selectVisibleTodos } from '../../store/todos/todosSelectors';
 import DeleteBtn from '../DeleteBtn/DeleteBtn';
 import TodoItem from '../TodoItem/TodoItem';
 import TodosMenu from '../TodosMenu/TodosMenu';
 import styles from './TodoList.module.scss';
 
 const TodoList = () => {
-  const todos = [
-    { id: 1, title: 'Learn Redux', completed: false },
-    { id: 2, title: 'Learn Toolkit', completed: false },
-    { id: 3, title: 'Learn Typescript', completed: false },
-  ];
+  const dispatch = useDispatch();
+  const activeFilter = useSelector(selectActiveFilter);
+  const todos = useSelector(state => selectVisibleTodos(state, activeFilter));
 
   return (
     <div className={styles.todos}>
@@ -17,7 +20,7 @@ const TodoList = () => {
         {todos.map(todo => (
           <li key={todo.id} className={styles.todos__item}>
             <TodoItem todo={todo} />
-            <DeleteBtn />
+            <DeleteBtn id={todo.id} />
           </li>
         ))}
       </ul>

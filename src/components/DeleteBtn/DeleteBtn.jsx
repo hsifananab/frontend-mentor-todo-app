@@ -1,8 +1,12 @@
+import { useDispatch } from 'react-redux';
+import { removeTodo } from '../../store/todos/todosActions';
 import styles from './DeleteBtn.module.scss';
 
-const DeleteBtn = () => {
+const DeleteBtn = ({ id }) => {
+  const dispatch = useDispatch();
+
   return (
-    <div className={styles.deleteBtn}>
+    <div className={styles.deleteBtn} onClick={() => dispatch(removeTodo(id))}>
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
         <path
           fill="#494C6B"

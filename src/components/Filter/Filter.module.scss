@@ -13,5 +13,11 @@
     font-family: var(--family);
     color: var(--color-text-light);
     font-weight: var(--fw-bold);
+
+    transition: all linear 0.2s;
+
+    &:hover {
+      color: var(--color-text-primary);
+    }
   }
 }

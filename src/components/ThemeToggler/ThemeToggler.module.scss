@@ -1,3 +1,11 @@
 .toggler {
   cursor: pointer;
+
+  & path {
+    transition: all linear 0.2s;
+  }
+
+  &:hover path {
+    fill: yellow;
+  }
 }

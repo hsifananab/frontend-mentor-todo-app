@@ -1,17 +1,19 @@
 import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleTheme } from '../../store/theme/themeActions';
+import { selectActiveTheme } from '../../store/theme/themeSelectors';
 import styles from './ThemeToggler.module.scss';
 
 const ThemeToggler = () => {
-  const [theme, setTheme] = useState('light');
-
-  const toggleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light');
+  const dispatch = useDispatch();
+  const theme = useSelector(selectActiveTheme);
 
   useEffect(() => {
     document.body.setAttribute('data-theme', theme);
   }, [theme]);
 
   return (
-    <div className={styles.toggler} onClick={toggleTheme}>
+    <div className={styles.toggler} onClick={() => dispatch(toggleTheme)}>
       {theme === 'light' ? (
         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
           <path

@@ -17,6 +17,13 @@
 
     &:last-child {
       text-align: right;
+      cursor: pointer;
+
+      transition: all linear 0.2s;
+
+      &:hover {
+        color: var(--color-text-primary);
+      }
     }
   }
 }
